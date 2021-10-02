@@ -45,7 +45,7 @@ def start_calc():
     prevloss = 0
     lossdiff = 1
     while(lossdiff>0.00001):
-        print('epoch number- ',e,' loss sqrt = ',loss1)
+        print('epoch number- ',e,' loss sqrt = ',loss1) #printing epoch numbers and square roots of losses
         sumw = 0
         sumb = 0
         loss = 0
@@ -76,6 +76,7 @@ def start_calc():
     print('w= ',w,' b= ',b)
     for k in range(0,len(x)):
         ypreds.append(x[k]*w + b)
+    #plotting 
     plt.figure(2)
     plt.plot(x, ypreds,'red')
     plt.scatter(x,y,c='blue')
