@@ -51,9 +51,9 @@ def start_calc():
         loss = 0
         for k in range(0,len(x)):
             ypred = x[k]*w + b
-            sumw = sumw + x[k]*(y[k]-ypred)
-            sumb = sumb + (y[k]-ypred)
-            loss = loss + (ypred - y[k])*(ypred - y[k])
+            sumw = sumw + x[k]*(y[k]-ypred)   # partial derivative of cost function wrt slope
+            sumb = sumb + (y[k]-ypred)        # partial derivative of cost function wrt intercept
+            loss = loss + (ypred - y[k])*(ypred - y[k])  
         dw = -2*(sumw)/len(x)
         bw = -2*(sumb)/len(x)
         loss = loss/len(x)
