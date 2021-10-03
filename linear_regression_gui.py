@@ -51,8 +51,8 @@ def start_calc():
         loss = 0
         for k in range(0,len(x)):
             ypred = x[k]*w + b
-            sumw = sumw + x[k]*(y[k]-ypred)   # partial derivative of cost function wrt slope
-            sumb = sumb + (y[k]-ypred)        # partial derivative of cost function wrt intercept
+            sumw = sumw + x[k]*(y[k]-ypred)   # partial derivative of the cost function with respect to slope
+            sumb = sumb + (y[k]-ypred)        # partial derivative of the cost function with respect to intercept
             loss = loss + (ypred - y[k])*(ypred - y[k])  
         dw = -2*(sumw)/len(x)
         bw = -2*(sumb)/len(x)
@@ -114,6 +114,7 @@ for i in csvreader:
     y.append(int(float(temp[2])))
 fig=plt.figure()
 camera=Camera(fig)
+#plotting the values
 plt.scatter(x,y,c="blue")
 plt.xlabel(header[1])
 plt.ylabel(header[2])
