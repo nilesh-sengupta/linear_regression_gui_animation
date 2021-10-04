@@ -32,6 +32,8 @@ def retrieve_lr():
 #     for i in range(0,len(weight)):
 #         res+=weight[i]-yp
 #     return res
+
+#start_calc() - This function starts the calculation
 def start_calc():
     ypreds=[]
     w=0
