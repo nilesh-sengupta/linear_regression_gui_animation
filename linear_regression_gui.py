@@ -35,6 +35,7 @@ def retrieve_lr():
 
 #start_calc() - This function starts the calculation
 def start_calc():
+    uio=0
     ypreds=[]
     w=0
     b=0
